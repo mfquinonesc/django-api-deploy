@@ -140,3 +140,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:4200",
     "http://127.0.0.1:4200",
 ]
+
+FRONTEND_CORS = os.environ.get('FRONTEND_CORS')
+if FRONTEND_CORS:
+    CORS_ALLOWED_ORIGINS.append(FRONTEND_CORS)
